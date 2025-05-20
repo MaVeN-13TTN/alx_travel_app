@@ -39,7 +39,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", include("listings.urls")),
+    path("api/", include("alx_travel_app.listings.urls")),  # Updated path
     # Swagger documentation URLs
     path(
         "swagger<format>/", schema_view.without_ui(cache_timeout=0), name="schema-json"

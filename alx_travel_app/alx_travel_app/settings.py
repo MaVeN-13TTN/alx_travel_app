@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Local apps
-    "listings.apps.ListingsConfig",  # This should still work if BASE_DIR is in sys.path
+    "alx_travel_app.listings.apps.ListingsConfig",  # Updated path
     # Third-party apps
     "rest_framework",
     "corsheaders",
