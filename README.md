@@ -91,7 +91,7 @@ python manage.py runserver
 
 Start the Celery worker:
 ```bash
-celery -A alxtravelapp worker -l info
+celery -A alx_travel_app.alx_travel_app worker -l info
 ```
 
 ## Project Structure
@@ -104,14 +104,15 @@ celery -A alxtravelapp worker -l info
 ├── README.md
 ├── manage.py
 ├── requirements.txt
-├── settings.py         # Project settings
-├── urls.py             # Project URLs
-├── celery.py           # Celery configuration
-├── __init__.py         # Project __init__ (for Celery)
-├── wsgi.py             # WSGI configuration
-├── asgi.py             # ASGI configuration
-├── alx_travel_app.py   # Python path helper (if used)
-├── listings/           # Django app for listings
+├── alx_travel_app/                 # Main project folder
+│   ├── alx_travel_app/             # Django project configuration folder
+│   │   ├── __init__.py         # Project __init__ (for Celery)
+│   │   ├── settings.py         # Project settings
+│   │   ├── urls.py             # Project URLs
+│   │   ├── celery.py           # Celery configuration
+│   │   ├── wsgi.py             # WSGI configuration
+│   │   ├── asgi.py             # ASGI configuration
+├── listings/                   # Django app for listings
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
@@ -120,7 +121,7 @@ celery -A alxtravelapp worker -l info
 │   ├── urls.py
 │   ├── views.py
 │   └── migrations/
-└── venv/               # Virtual environment (typically in .gitignore)
+└── venv/                       # Virtual environment (typically in .gitignore)
 ```
 
 ## API Endpoints
