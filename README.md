@@ -97,28 +97,33 @@ celery -A alxtravelapp worker -l info
 ## Project Structure
 
 ```
-alxtravelapp/
-├── alxtravelapp/          # Project configuration
-│   ├── __init__.py
-│   ├── celery.py         # Celery configuration
-│   ├── settings.py       # Project settings
-│   ├── urls.py           # Project URLs
-│   ├── asgi.py
-│   └── wsgi.py
-├── listings/             # Listings app
-│   ├── __init__.py
-│   ├── admin.py          # Admin interface
-│   ├── apps.py
-│   ├── models.py         # Data models
-│   ├── serializers.py    # REST API serializers
-│   ├── urls.py           # App URLs
-│   └── views.py          # API views
-├── .env                  # Environment variables
+.
+├── .env
+├── .env.example
+├── .gitignore
+├── README.md
 ├── manage.py
-└── requirements.txt      # Dependencies
+├── requirements.txt
+├── settings.py         # Project settings
+├── urls.py             # Project URLs
+├── celery.py           # Celery configuration
+├── __init__.py         # Project __init__ (for Celery)
+├── wsgi.py             # WSGI configuration
+├── asgi.py             # ASGI configuration
+├── alx_travel_app.py   # Python path helper (if used)
+├── listings/           # Django app for listings
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   ├── views.py
+│   └── migrations/
+└── venv/               # Virtual environment (typically in .gitignore)
 ```
 
-## API Documentation
+## API Endpoints
 
 - Interactive API documentation is available at `/swagger/` endpoint
 - ReDoc alternative interface is available at `/redoc/` endpoint

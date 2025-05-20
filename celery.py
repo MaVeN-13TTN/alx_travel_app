@@ -3,9 +3,11 @@ import os
 from celery import Celery
 
 # Set the default Django settings module for the 'celery' program.
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "alxtravelapp.settings")
+os.environ.setdefault(
+    "DJANGO_SETTINGS_MODULE", "settings"
+)  # Updated to use root-level settings.py
 
-app = Celery("alxtravelapp")
+app = Celery("alx_travel_app")  # Updated app name
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
