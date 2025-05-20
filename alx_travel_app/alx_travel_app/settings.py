@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Local apps
-    "alx_travel_app.listings.apps.ListingsConfig",  # Updated path
+    "alx_travel_app.alx_travel_app.listings",
     # Third-party apps
     "rest_framework",
     "corsheaders",

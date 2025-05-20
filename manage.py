@@ -6,6 +6,9 @@ import sys
 
 def main():
     """Run administrative tasks."""
+    # Add the project directory to Python path
+    project_root = os.path.dirname(os.path.abspath(__file__))
+    sys.path.insert(0, project_root)
     os.environ.setdefault(
         "DJANGO_SETTINGS_MODULE", "alx_travel_app.alx_travel_app.settings"
     )

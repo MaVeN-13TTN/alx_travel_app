@@ -86,6 +86,7 @@ python manage.py runserver
    - Admin interface: http://127.0.0.1:8000/admin/
    - API root: http://127.0.0.1:8000/api/
    - Swagger documentation: http://127.0.0.1:8000/swagger/
+   - ReDoc documentation: http://127.0.0.1:8000/redoc/
 
 ### Running Celery (optional)
 
@@ -104,24 +105,24 @@ celery -A alx_travel_app.alx_travel_app worker -l info
 ├── README.md
 ├── manage.py
 ├── requirements.txt
-├── alx_travel_app/                 # Main project folder
-│   ├── alx_travel_app/             # Django project configuration folder
-│   │   ├── __init__.py         # Project __init__ (for Celery)
-│   │   ├── settings.py         # Project settings
-│   │   ├── urls.py             # Project URLs
-│   │   ├── celery.py           # Celery configuration
-│   │   ├── wsgi.py             # WSGI configuration
-│   │   ├── asgi.py             # ASGI configuration
-├── listings/                   # Django app for listings
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── serializers.py
-│   ├── urls.py
-│   ├── views.py
-│   └── migrations/
-└── venv/                       # Virtual environment (typically in .gitignore)
+├── alx_travel_app/                  # First level package
+│   └── alx_travel_app/             # Django project configuration folder
+│       ├── __init__.py             # Project __init__ (for Celery)
+│       ├── settings.py             # Project settings
+│       ├── urls.py                 # Project URLs
+│       ├── celery_app.py           # Celery configuration
+│       ├── wsgi.py                 # WSGI configuration
+│       ├── asgi.py                 # ASGI configuration
+│       └── listings/               # Listings app
+│           ├── __init__.py
+│           ├── admin.py
+│           ├── apps.py
+│           ├── models.py
+│           ├── serializers.py
+│           ├── urls.py
+│           ├── views.py
+│           └── migrations/
+└── venv/                           # Virtual environment (typically in .gitignore)
 ```
 
 ## API Endpoints
